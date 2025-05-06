@@ -18,7 +18,7 @@ NCTX=$3  # number of context tokens
 SHOTS=$4  # number of shots (5, 20, 50)
 
 # DATASET="Caltech101,Food101,StanfordCars,OxfordPets,OxfordFlowers,FGVCAircraft,SUN397,DescribableTextures,EuroSAT,UCF101"
-DATASET="Caltech101,Food101,StanfordCars,OxfordPets,OxfordFlowers,FGVCAircraft,SUN397"
+DATASET="Caltech101"
 # for SEED in 1 2 3
 # for SEED in 1
 for SEED in $5
