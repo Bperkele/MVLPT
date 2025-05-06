@@ -1,5 +1,6 @@
 from vision_datasets import DatasetHub
 import pathlib
+VISION_DATASET_STORAGE = "/shared/sheng/coop_data"
 
 
 def get_dataset_hub():
