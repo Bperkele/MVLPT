@@ -709,7 +709,11 @@ try:
 except ImportError:
     # fall back to DatasetManifest.create_dataset_manifest, or another manifest helper
     from vision_datasets.common.data_manifest import DatasetManifest as _generate_multitask_dataset_manifest
-from vision_datasets.pytorch.dataset import Dataset
+try:
+    from vision_datasets.pytorch.dataset import Dataset
+except ImportError:
+    from vision_datasets.common.dataset import Dataset
+
 
 class MultiTaskTorchDataset(Dataset):
     """
