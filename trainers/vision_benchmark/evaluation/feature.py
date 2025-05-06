@@ -712,7 +712,7 @@ except ImportError:
 try:
     from vision_datasets.pytorch.dataset import Dataset
 except ImportError:
-    from vision_datasets.common.dataset import Dataset
+    from vision_datasets.torch.dataset import Dataset
 
 
 class MultiTaskTorchDataset(Dataset):
