@@ -1,6 +1,6 @@
 from vision_datasets import DatasetHub
 import pathlib
-VISION_DATASET_STORAGE = 'https://cvinthewildeus.blob.core.windows.net/datasets'
+VISION_DATASET_STORAGE = "/shared/sheng/coop_data"
 
 def get_dataset_hub():
     vision_dataset_json = (pathlib.Path(__file__).resolve().parents[1] / 'resources' / 'datasets' / 'vision_datasets.json').read_text()
