@@ -26,7 +26,7 @@ from ..datasets import class_map, template_map
 from PIL import Image
 from PIL import ImageFile
 
-from vision_datasets import ManifestDataset
+from vision_datasets import DatasetManifest as ManifestDataset
 from nltk.corpus import wordnet as wn
 import nltk
 from nltk.tokenize import word_tokenize
