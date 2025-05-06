@@ -703,7 +703,12 @@ def construct_dataset(config, feature_type="image", test_split_only=False):
     return train_set, test_set, train_set_dataset_info, test_set_dataset_info, transform_clip
 
 
-from vision_datasets.common.data_manifest import generate_multitask_dataset_manifest as _generate_multitask_dataset_manifest
+# try the old name, otherwise fall back to any available generator
+try:
+    from vision_datasets.common.data_manifest import _generate_multitask_dataset_manifest
+except ImportError:
+    # fall back to DatasetManifest.create_dataset_manifest, or another manifest helper
+    from vision_datasets.common.data_manifest import DatasetManifest as _generate_multitask_dataset_manifest
 from vision_datasets.pytorch.dataset import Dataset
 
 class MultiTaskTorchDataset(Dataset):
